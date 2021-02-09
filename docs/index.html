@@ -1,23 +1,45 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta content="HTML5 Presentation" name="description"/>
-    <meta content="HTML5 SlideShow, HTML5 Presentation, HTML5Point Converter, DigitalOfficePro" name="keywords"/>
-    <meta content="HTML5Point" name="author"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" name="viewport"/>
-    <meta content="yes" name="apple-mobile-web-app-capable"/>
+<html><head>
+    <meta content="HTML5 Presentation" name="description">
+    <meta content="HTML5 SlideShow, HTML5 Presentation, HTML5Point Converter, DigitalOfficePro" name="keywords">
+    <meta content="HTML5Point" name="author">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
     <title>Presentation</title>
-    <script type="text/javascript">var presenterNode='##dopPresenter##';</script>
-    <script type="text/javascript" src="data/common/script.js"></script>
-    <script type="text/javascript" src="data/player/player.js"></script>
+    <script type="text/javascript">var presenterNode = '##dopPresenter##';</script>
+
     <style type="text/css">
-        .DC1{top:0px;left:0px;height:100%;width:100%;opacity:1;}.DC0{top:0px;left:0px;height:100%;width:100%;opacity:0;}
-        ::selection{background-color:transparent;}
-        ::-moz-selection {}
-        #player {position: relative;}
-        #player canvas, #player div, #player iframe{position:absolute;}
+        .DC1 {
+            top: 0px;
+            left: 0px;
+            height: 100%;
+            width: 100%;
+            opacity: 1;
+        }
+
+        .DC0 {
+            top: 0px;
+            left: 0px;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+        }
+
+        ::selection {
+            background-color: transparent;
+        }
+
+        ::-moz-selection {
+        }
+
+        #player {
+            position: relative;
+        }
+
+        #player canvas, #player div, #player iframe {
+            position: absolute;
+        }
         #player pre:not([class*="preL"]){letter-spacing:-0.04px;}
         #player pre{position:absolute;margin:0px;-ms-transform-origin:0 0;-webkit-transform-origin:0 0;-moz-transform-origin:0 0;-o-transform-origin:0 0;}
         #player img{position:absolute;width:100%;height:100%;left:0px;top:0px;}
@@ -40,23 +62,204 @@
         #btnFullscreen{top:15px;right:20px;height:20px;width:20px;cursor:pointer;background-repeat: no-repeat;background-position: center;}#btnFullscreen:hover{opacity:0.8}
         .boxShadow{-webkit-box-shadow:0px 2px 2px rgba(0,0,0,0.027), inset 0px 1px 0px rgba(255,255,255,0.69), inset 0px -1px 0px rgba(0,0,0,0.0187), inset 0px 15px 14px rgba(255,255,255,0.57);-moz-box-shadow:0px 2px 2px rgba(0,0,0,0.027), inset 0px 1px 0px rgba(255,255,255,0.69), inset 0px -1px 0px rgba(0,0,0,0.0187), inset 0px 15px 14px rgba(255,255,255,0.57);-o-box-shadow:0px 2px 2px rgba(0,0,0,0.027), inset 0px 1px 0px rgba(255,255,255,0.69), inset 0px -1px 0px rgba(0,0,0,0.0187), inset 0px 15px 14px rgba(255,255,255,0.57);box-shadow: 0px 2px 2px rgba(0,0,0,0.027), inset 0px 1px 0px rgba(255,255,255,0.69), inset 0px -1px 0px rgba(0,0,0,0.0187), inset 0px 15px 14px rgba(255,255,255,0.57); }
         .transOrgin{-moz-transform-origin: 0 0;-o-transform-origin: 0 0;-webkit-transform-origin: 0px 0px;-ms-transform-origin: 0 0;}
-        #notesButton, #noteDisplay{cursor:pointer;margin:0;position:relative;display:block;color:#666;text-shadow:0px 1px 0px rgba(255,255,255,0.59);background:#ececec;padding:5px;outline:none;border:1px solid #d8d8d8;border-bottom:1px solid #ccc;border-radius:3px;overflow:visible;}
-        .boxShadow:hover {color:#696969;text-shadow:0px 1px 0px rgba(255,255,255,0.53);border: 1px solid #d2d2d2;border-bottom:1px solid #d8d8d8;border-radius:3px;-webkit-box-shadow:0px 1px 0px rgba(255,255,255,0.58), inset 0px 1px 6px rgba(0,0,0,0.07), inset 0px -15px 14px rgba(255,255,255,0.20);-moz-box-shadow:0px 1px 0px rgba(255,255,255,0.58), inset 0px 1px 6px rgba(0,0,0,0.07), inset 0px -15px 14px rgba(255,255,255,0.20);-o-box-shadow:0px 1px 0px rgba(255,255,255,0.58), inset 0px 1px 6px rgba(0,0,0,0.07), inset 0px -15px 14px rgba(255,255,255,0.20);box-shadow: 0px 1px 0px rgba(255,255,255,0.58), inset 0px 1px 6px rgba(0,0,0,0.07), inset 0px -15px 14px rgba(255,255,255,0.20);}
-        #panel{left:0px;top:0px;height:100%;width:250px;display:none;background-color:#ECECEC;font-family:Arial;}
-        #noteDisplay{padding:10px;margin:9px;top:15px;height:100%;color:#707070;background-color:#F7F7F7;cursor:default;width:210px;font-size:12px;font-weight:normal;overflow-y:auto;overflow-x:hidden;}
-        #slideNote{left:0px;top:10px;height:100%;width:100%;}
-        .note-head{background-color:rgb(205,205,205);width:221px;height:24px;margin-left:10px;padding:5px;color:#5C5C5C;font-size:small;}
-        #loadingImg{height:100%;width:100%;display:block;}
-        #loadingImg div{left:50%;top:50%;width:50px;height:50px;margin:-25px 0 0 -25px;border-radius:4px;background-color:rgba(255,255,255,.8);opacity:0.8;}
-        #inImg{height:80% !important;width:80% !important;margin:10%;}
+
+        #notesButton, #noteDisplay {
+            cursor: pointer;
+            margin: 0;
+            position: relative;
+            display: block;
+            color: #666;
+            text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.59);
+            background: #ececec;
+            padding: 5px;
+            outline: none;
+            border: 1px solid #d8d8d8;
+            border-bottom: 1px solid #ccc;
+            border-radius: 3px;
+            overflow: visible;
+        }
+
+        .boxShadow:hover {
+            color: #696969;
+            text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.53);
+            border: 1px solid #d2d2d2;
+            border-bottom: 1px solid #d8d8d8;
+            border-radius: 3px;
+            -webkit-box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.58), inset 0px 1px 6px rgba(0, 0, 0, 0.07), inset 0px -15px 14px rgba(255, 255, 255, 0.20);
+            -moz-box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.58), inset 0px 1px 6px rgba(0, 0, 0, 0.07), inset 0px -15px 14px rgba(255, 255, 255, 0.20);
+            -o-box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.58), inset 0px 1px 6px rgba(0, 0, 0, 0.07), inset 0px -15px 14px rgba(255, 255, 255, 0.20);
+            box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.58), inset 0px 1px 6px rgba(0, 0, 0, 0.07), inset 0px -15px 14px rgba(255, 255, 255, 0.20);
+        }
+
+        #panel {
+            left: 0px;
+            top: 0px;
+            height: 100%;
+            width: 250px;
+            display: none;
+            background-color: #ECECEC;
+            font-family: Arial;
+        }
+
+        #noteDisplay {
+            padding: 10px;
+            margin: 9px;
+            top: 15px;
+            height: 100%;
+            color: #707070;
+            background-color: #F7F7F7;
+            cursor: default;
+            width: 210px;
+            font-size: 12px;
+            font-weight: normal;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        #slideNote {
+            left: 0px;
+            top: 10px;
+            height: 100%;
+            width: 100%;
+        }
+
+        .note-head {
+            background-color: rgb(205, 205, 205);
+            width: 221px;
+            height: 24px;
+            margin-left: 10px;
+            padding: 5px;
+            color: #5C5C5C;
+            font-size: small;
+        }
+
+        #loadingImg {
+            height: 100%;
+            width: 100%;
+            display: block;
+        }
+
+        #loadingImg div {
+            left: 50%;
+            top: 50%;
+            width: 50px;
+            height: 50px;
+            margin: -25px 0 0 -25px;
+            border-radius: 4px;
+            background-color: rgba(255, 255, 255, .8);
+            opacity: 0.8;
+        }
+
+        #inImg {
+            height: 80% !important;
+            width: 80% !important;
+            margin: 10%;
+        }
     </style>
-</head>
+    <meta id="Reverso_extension___elForCheckedInstallExtension" name="Reverso extension" content="2.2.202">
+    <script src="chrome-extension://mooikfkahbdckldjjndioackbalphokd/assets/prompt.js"></script>
+    <link rel="stylesheet" href="data/pres/styleVault.css">
+    <style type="text/css" id="DopFontFamily">@font-face {
+        font-family: "Font0";
+        src: url("data/pres/Font0.woff");
+    }
+
+    @font-face {
+        font-family: "Font1";
+        src: url("data/pres/Font1.woff");
+    }
+
+    @font-face {
+        font-family: "Font2";
+        src: url("data/pres/Font2.woff");
+    }</style>
+    <script charset="UTF-8" src="data/pres/slideVault.js"></script>
+    <meta id="Reverso_extension___elForCheckedInstallExtension" name="Reverso extension" content="2.2.202"><script src="chrome-extension://mooikfkahbdckldjjndioackbalphokd/assets/prompt.js"></script></head>
 <body>
 <div id="player" style="height:100%;width:100%;overflow:hidden;">
     <div id="contentHolder">
-        <div id="resizer" style="left:0px;top:0px;height:540px;width:720px;overflow:hidden;-moz-transform-origin: 0 0;-o-transform-origin: 0 0;-webkit-transform-origin: 0 0;-ms-transform-origin: 0 0;"></div>
+        <div id="resizer" style="/* left: 0px; *//* top: 0px; *//* height: 540px; *//* width: 960px; *//* overflow: scroll; *//* transform-origin: 0px 0px; *//* background-color: rgb(216, 216, 216); */-moz-font-feature-settings: 'liga' 0;-ms-font-feature-settings: 'liga' 0;-o-font-feature-settings: 'liga' 0;/* font-feature-settings: 'liga' 0; *//* text-rendering: optimizeSpeed; */-webkit-font-variant-ligatures: no-common-ligatures;/* font-variant-ligatures:no-common-ligatures; */">
+            <div class="SC" id="s1s0" style="display: flex;left: 400px;">
+                <div id="s1s51" style="/* top: -0.476807px; *//* left: -0.46936px; *//* height: 540.96px; *//* width: 960.96px; *//* transform: translateZ(0px); */">
+                    <img data-ext="jpg" src="data/pres/s1s51.jpg"></div>
+                <div id="s1s23" style="top: 278.569px;left: 756.676px;height: 239.827px;width: 252.448px;transform: translateZ(0px);">
+                    <div id="s1s19" style="top:1.64444px;left:7.217407px;height:30.11331px;width:183.0971px;">
+                        <pre class="pre0" style="left:7.816345px;top:7.833618px;">Алексей Худяков</pre>
+                    </div>
+                    <div id="s1s20" style="top:57.54092px;left:0.8399658px;height:127.0518px;width:251.6086px;">
+                        <pre class="pre1" style="left:7.484497px;top:5.355408px;">•</pre>
+                        <pre class="pre2" style="left:21.14838px;top:6.914001px;">Дата рождения: 15.07.2004</pre>
+                        <pre class="pre1" style="left:7.484497px;top:22.1554px;">•</pre>
+                        <pre class="pre2" style="left:21.14838px;top:23.71399px;">Место рождения: Минск, РБ</pre>
+                        <pre class="pre1" style="left:7.484497px;top:38.95541px;">•</pre>
+                        <pre class="pre2" style="left:21.14838px;top:40.51401px;">Страна: Беларусь</pre>
+                        <pre class="pre1" style="left:7.484497px;top:55.7554px;">•</pre>
+                        <pre class="pre2" style="left:21.14838px;top:57.314px;">Позиция: Вратарь</pre>
+                        <pre class="pre1" style="left:7.484497px;top:72.55542px;">•</pre>
+                        <pre class="pre2" style="left:21.14838px;top:74.11401px;">Хват: Левый</pre>
+                        <pre class="pre1" style="left:7.484497px;top:89.35541px;">•</pre>
+                        <pre class="pre2" style="left:21.14838px;top:90.914px;">Рост :178</pre>
+                        <pre class="pre1" style="left:7.484497px;top:106.1554px;">•</pre>
+                        <pre class="pre2" style="left:21.14838px;top:107.714px;">Вес:75</pre>
+                    </div>
+                    <div id="s1s21" style="top:212.0399px;left:29.17474px;height:27.71384px;width:139.1826px;">&nbsp;
+                    </div>
+                </div>
+                <div id="s1s24" style="top: -11.0025px; left: 268.552px; height: 73.9036px; width: 490.019px; transform: translateZ(0px);">
+                    <pre class="pre3" style="top:17.30567px;left:9.372328px;color:transparent; text-shadow: 0px 0px 3px rgba(0,0,0,0.43137);filter: progid:DXImageTransform.Microsoft.Blur(pixelradius=2)">Алексей Худяков</pre>
+                    <pre class="pre3" style="left:7.666168px;top:15.59951px;">Алексей Худяков</pre>
+                </div>
+                <div id="s1s25" style="top: 120.34px; left: 30.2894px; height: 161.124px; width: 535.853px; transform: translateZ(0px);">
+                    <pre class="pre0" style="left:7.674271px;top:7.78627px;">Характеристика игрока</pre>
+                    <pre class="pre0" style="left:203.5493px;top:7.78627px;">:</pre>
+                    <pre class="pre0" style="left:207.6743px;top:7.78627px;"></pre>
+                    <pre class="pre4" style="left:7.710571px;top:27.38235px;">•</pre>
+                    <pre class="pre0" style="left:30.17427px;top:29.38626px;">СДЮШОР им. Руслана Салея (СДЮШОР U16, U17, U18).</pre>
+                    <pre class="pre4" style="left:7.710571px;top:48.98236px;">•</pre>
+                    <pre class="pre0" style="left:30.17427px;top:50.98627px;">В сезоне 2019/2020 участвовал в международном турнире</pre>
+                    <pre class="pre0" style="left:30.17427px;top:72.58626px;">Карпатской лиги.</pre>
+                    <pre class="pre4" style="left:7.710571px;top:92.18236px;">•</pre>
+                    <pre class="pre0" style="left:30.17427px;top:94.18626px;">В 2019 году участник международного турнира в городе</pre>
+                    <pre class="pre0" style="left:30.17427px;top:115.7863px;">Попрад (Словакия) в составе команды Poland Select .</pre>
+                    <pre class="pre4" style="left:7.710571px;top:135.3824px;">•</pre>
+                    <pre class="pre0" style="left:30.17427px;top:137.3863px;">Лучший вратарь СДЮШОРа в сезоне 2018</pre>
+                    <pre class="pre0" style="left:379.5493px;top:137.3863px;">/</pre>
+                    <pre class="pre0" style="left:386.2993px;top:137.3863px;">2019.</pre>
+                    <pre class="pre4" style="left:7.710571px;top:156.9824px;">•</pre>
+                    <pre class="pre0" style="left:30.17427px;top:158.9863px;">Лучший вратарь СДЮШОРа в сезоне 2019</pre>
+                    <pre class="pre0" style="left:378.6743px;top:158.9863px;">/</pre>
+                    <pre class="pre0" style="left:385.4243px;top:158.9863px;">2020.</pre>
+                </div>
+                <div id="s1s45" style="top: 59.5588px; left: 728.67px; height: 217.392px; width: 219.093px; transform: translateZ(0px);">
+                    <img src="data/pres/s1s45.png"></div>
+                <div id="s1s46" style="top: 269.475px; left: 104.206px; height: 51.9485px; width: 123.465px; transform: translateZ(0px);">
+                    <pre class="pre0" style="left:7.721817px;top:7.725739px;"></pre>
+                    <pre class="pre0" style="left:7.721817px;top:29.32571px;">Нарезка</pre>
+                    <pre class="pre0" style="left:7.721817px;top:50.92572px;">сейвов</pre>
+                </div>
+                <div id="s1s3" style="top: 60.9811px; left: -0.349487px; height: 2px; width: 961.68px; transform: translateZ(0px);">
+                    <img src="data/pres/s1s3.png"></div>
+                <div id="s1s4" style="top: 291.058px; left: 425.857px; height: 30.2333px; width: 240.09px; transform: translateZ(0px);">
+                    <pre class="pre0" style="left:7.779999px;top:7.953613px;">Видео тренировок</pre>
+                </div>
+                <div id="s1s6" style="top: 305.838px; left: 331.14px; height: 213.313px; width: 2px; transform: translateZ(0px);">
+                    <img src="data/pres/s1s6.png"></div>
+                <div id="s1s14" style="top: 353.367px; left: 43.493px; height: 138.329px; width: 244.889px; cursor: pointer; transform: translateZ(0px);">
+                    <div class="DC1" id="s1s14c">
+                        <video data-fpath="null" id="vs1s14" controls="" poster="data/pres/s1s14.png" src="data/pres/vs1s14.mp4" preload="" webkit-playsinline="" playsinline="" controlslist="nodownload" style="height: 138px; width: 244px; transform: matrix(1, 0, 0, 1, 0, 0); -webkit-mask-box-image-source: url(&quot;data/pres/s1s14.png&quot;); -webkit-mask-box-image-slice: initial; -webkit-mask-box-image-width: initial; -webkit-mask-box-image-outset: initial; -webkit-mask-box-image-repeat: initial;"></video>
+                    </div>
+                </div>
+                <div id="s1s2" style="top: 353.367px; left: 392.704px; height: 138.329px; width: 240.93px; cursor: pointer; transform: translateZ(0px);">
+                    <div class="DC1" id="s1s2c">
+                        <video data-fpath="null" id="vs1s2" controls="" poster="data/pres/s1s2.png" src="data/pres/vs1s2.mp4" preload="" webkit-playsinline="" playsinline="" controlslist="nodownload" style="height: 138px; width: 240px; transform: matrix(1, 0, 0, 1, 0, 0); -webkit-mask-box-image-source: url(&quot;data/pres/s1s2.png&quot;); -webkit-mask-box-image-slice: initial; -webkit-mask-box-image-width: initial; -webkit-mask-box-image-outset: initial; -webkit-mask-box-image-repeat: initial;"></video>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div id="loadingImg"><div><img id="inImg" src="data/player/pre.gif" alt="loading"/></div></div>
+    <div id="loadingImg" style="display: none;">
+        <div><img id="inImg" src="data/player/pre.gif" alt="loading"></div>
+    </div>
     <div id="panel">
         <div id="slideNote">
             <div class="note-head">Slide Note</div>
@@ -64,5 +267,13 @@
         </div>
     </div>
 </div>
-</body>
-</html>
+
+
+<div id="mouseposition-extension-element-full-container" style="position: fixed; inset: 0px; pointer-events: none; z-index: 2147483647; font-weight: 400;">
+    <div id="mouseposition-extension-element-rect-display" style="display: none; position: absolute; background: rgba(255, 255, 255, 0.7); outline: black solid 1px; font-size: 12px; z-index: 2147483647; justify-content: center; align-items: center; user-select: none; cursor: default; color: rgb(0, 0, 0); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; width: 0px; height: 0px;">
+        <pre style="flex: 1 1 0%; text-align: center; background-color: rgba(255, 255, 255, 0.7); color: rgb(0, 0, 0); min-width: 42px; min-height: 12px; transition: all 1s ease 0s;"></pre>
+    </div>
+    <pre id="mouseposition-extension-element-coordinate-display" style="position: absolute; display: none; background: rgb(255, 255, 255); font-size: 12px; line-height: 14px; border-radius: 3px; border-width: 1px; border-color: rgb(34, 34, 34) black rgb(51, 51, 51); border-style: solid; padding: 3px; z-index: 2147483647; color: rgb(34, 34, 34); user-select: none; cursor: default; font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;"></pre>
+</div>
+
+</body></html>
