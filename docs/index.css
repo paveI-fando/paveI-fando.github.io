@@ -1,0 +1,109 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.player-card {
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+    justify-content: center;
+}
+
+.minimized-video {
+    height: 138px;
+    width: 244px;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    /*-webkit-mask-box-image-source: url("data/pres/s1s14.png");*/
+    -webkit-mask-box-image-slice: initial;
+    -webkit-mask-box-image-width: initial;
+    -webkit-mask-box-image-outset: initial;
+    -webkit-mask-box-image-repeat: initial
+}
+
+.header {
+    font-size: 54px;
+    color: #595959;
+    font-family: "Sitka Display", Font2;
+    line-height: 68px;
+    display: flex;
+    border-bottom: #5C5C5C solid;
+    align-content: center;
+    justify-content: center;
+}
+.no-margins {
+    margin: 0;
+}
+
+.main-container {
+    display: flex;
+}
+
+.flex-display {
+    display: flex;
+}
+
+.half-size {
+    flex: 50%;
+    padding: 10px;
+}
+.general-info-container > p {
+    font-size: 18px;
+}
+.general-info-container {
+    font-size: 14px;
+    color: #595959;
+    font-family: "Bahnschrift", Font0;
+    line-height: 18px;
+}
+.characteristics-container {
+    font-size: 18px;
+    color: #595959;
+    font-family: "Bahnschrift", Font0;
+    line-height: 18px;
+}
+
+ul {
+    gap: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.dotted-right-line {
+border-right: #707070 dotted;
+}
+
+.no-margins-top {
+    margin-top: 0;
+}
+
+.center-element {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.styled-table {
+    font-family: "Bahnschrift", Font0;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.75);
+}
+
+.styled-table thead tr {
+    background-color: #a7a5a5;
+    color: #ffffff;
+    text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+.table-container {
+    padding-left: 40px;
+}
